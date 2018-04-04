@@ -16,6 +16,28 @@ before_action :check_configuration
     render
   end
 
+	def new 
+		render 'demo/new'
+	end
+
+	def new_upload
+		binding.pry
+		Cloudinary::Uploader.upload('my_image.jpg')
+	end
+
+	# def upload
+	# 	file = params[:upload]
+
+	# 	Cloudinary::Uploader.upload(
+	# 		file, 
+	# 		folder: "asdf",
+	# 		public_id: "my_file1",
+	# 		overwrite: true, 
+	# 		notification_url: "mailto:brad@smithwebtek.com",
+	# 		resource_type: "pdf"
+	# 	)
+	# end
+
 
 	# Assuming that you have a valid set of Cloudinary credentials
 	# Assuming that you have downloaded your 'cloudinary.yml' file and put in 'app/config' folder of this app
