@@ -1,4 +1,8 @@
 <%= form_tag({action: :new_upload, method: :post}, multipart: true) do %>
-  <%= file_field_tag 'pdf' %>
+	<%= file_field_tag 'file' %>
+	<%= date_field_tag 'date' %>
+	<br>
+	<br>
+	<%= button_tag 'upload' %>
 <% end %>
  
