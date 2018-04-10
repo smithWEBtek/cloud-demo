@@ -27,7 +27,7 @@ before_action :check_configuration
     :public_id => "asdf2",
     :chunk_size => 6_000_000
 		)
-		redirect_to 'demo/index'
+		render 'demo/index'
 	end
   
 	def get_resources
