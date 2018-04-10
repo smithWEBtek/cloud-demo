@@ -1,13 +1,9 @@
 <h1>
   Uploads and Transformations
 </h1>
-<% @pdfs.each do |pdf| %>
-<%= render 'image_box',
-  :upload => pdf,
-  :description => 'Fill 200x150',
-  :options => { :width => 200, :height => 150, :crop => "fill" }
-%>
-<% end %>
+
 <% @resources.each do |resource| %>
- <%= resource %>
+	Name: <%= resource["url"].split('/').last %>
+	 URL: <%= resource.secure_url %>
+	 
 <% end %>

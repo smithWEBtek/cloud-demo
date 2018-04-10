@@ -1,11 +1,14 @@
-<% @pdfs.each do |pdf| %>
-	<hr />
-	<ul>
-		<li>public_id: <%= pdf["public_id"] %></li>
-		<li>format: <%= pdf["format"] %></li>
-		<li>url: <%= link_to 'show_pdf', pdf["url"] %></li>
-		<li>secure_url: <%= pdf["secure_url"] %></li>
-	</ul>
-	<% end %>
-<hr />
+
+<div class='row'>
+	<div class='col-lg-12'>
+	<% @pdfs.each do |pdf| %>
+		<ul>
+			<strong><li><%= link_to pdf["secure_url"].split('/').last, pdf["url"] %></li></strong>
+			<li>format: <%= pdf["format"] %></li>
+			<li>secure_url: <%= pdf["secure_url"] %></li>
+		</ul>
+		<hr />
+		<% end %>
+	</div>
+</div>
  
