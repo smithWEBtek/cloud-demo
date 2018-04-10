@@ -22,9 +22,7 @@ before_action :check_configuration
 	end
 
 	def new_upload
-		binding.pry
-
-		file = params["pdf"]
+		file = params["file"]
 		Cloudinary::Uploader.upload(file, :resource_type => :image,
     :public_id => "asdf2",
     :chunk_size => 6_000_000
